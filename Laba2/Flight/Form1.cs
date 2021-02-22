@@ -42,11 +42,7 @@ namespace Flight
             chart1.Series[0].Points.AddXY(x, y);
 
             double h = v0 * v0 * Math.Sin(a) * Math.Sin(a) / (2 * g);
-            double l = v0 * v0 * Math.Sin(2 * a) / g;
-            if (y0 != 0)
-            {
-                l += y0 / Math.Tan(a);
-            }
+            double l = (v0 * Math.Cos(a) * ((v0 * Math.Sin(a) + Math.Sqrt(Math.Pow(v0 * Math.Sin(a), 2) + 2 * g * y0))/g))*1.1;
 
             chart1.ChartAreas[0].AxisY.Maximum = h + y0;
             chart1.ChartAreas[0].AxisX.Maximum = l;

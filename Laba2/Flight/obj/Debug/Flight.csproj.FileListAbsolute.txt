@@ -18,3 +18,13 @@ C:\Users\lenovo\Desktop\Laba2\Flight\obj\Debug\Flight.csproj.GenerateResource.ca
 C:\Users\lenovo\Desktop\Laba2\Flight\obj\Debug\Flight.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Desktop\Laba2\Flight\obj\Debug\Flight.exe
 C:\Users\lenovo\Desktop\Laba2\Flight\obj\Debug\Flight.pdb
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\bin\Debug\Flight.exe.config
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\bin\Debug\Flight.exe
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\bin\Debug\Flight.pdb
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.csprojAssemblyReference.cache
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.Form1.resources
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.Properties.Resources.resources
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.csproj.GenerateResource.cache
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.exe
+C:\Users\lenovo\Desktop\immodlab2\Laba2\Flight\obj\Debug\Flight.pdb
