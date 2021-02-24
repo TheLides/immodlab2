@@ -55,6 +55,7 @@ namespace Flight
             time++;
             label5.Text = time.ToString();
             t += dt;
+            label7.Text = t.ToString();
             x = v0 * Math.Cos(a) * t;
             y = y0 + v0 * Math.Sin(a) * t - g * t * t / 2;
             chart1.Series[0].Points.AddXY(x, y);

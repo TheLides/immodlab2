@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Stop_btn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btStart = new System.Windows.Forms.Button();
             this.edHeight = new System.Windows.Forms.NumericUpDown();
             this.edSpeed = new System.Windows.Forms.NumericUpDown();
@@ -41,9 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Stop_btn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edSpeed)).BeginInit();
@@ -53,6 +55,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.Stop_btn);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -65,16 +69,44 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 123);
             this.panel1.TabIndex = 0;
+            // 
+            // Stop_btn
+            // 
+            this.Stop_btn.Location = new System.Drawing.Point(610, 32);
+            this.Stop_btn.Name = "Stop_btn";
+            this.Stop_btn.Size = new System.Drawing.Size(122, 56);
+            this.Stop_btn.TabIndex = 9;
+            this.Stop_btn.Text = "Стоп";
+            this.Stop_btn.UseVisualStyleBackColor = true;
+            this.Stop_btn.Click += new System.EventHandler(this.Stop_btn_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(579, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(477, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Тик таймера:";
             // 
             // btStart
             // 
             this.btStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btStart.Location = new System.Drawing.Point(363, 30);
-            this.btStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btStart.Margin = new System.Windows.Forms.Padding(4);
             this.btStart.Name = "btStart";
             this.btStart.Size = new System.Drawing.Size(107, 58);
             this.btStart.TabIndex = 6;
@@ -85,7 +117,7 @@
             // edHeight
             // 
             this.edHeight.Location = new System.Drawing.Point(109, 86);
-            this.edHeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edHeight.Margin = new System.Windows.Forms.Padding(4);
             this.edHeight.Name = "edHeight";
             this.edHeight.Size = new System.Drawing.Size(131, 22);
             this.edHeight.TabIndex = 5;
@@ -93,7 +125,7 @@
             // edSpeed
             // 
             this.edSpeed.Location = new System.Drawing.Point(109, 48);
-            this.edSpeed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.edSpeed.Name = "edSpeed";
             this.edSpeed.Size = new System.Drawing.Size(131, 22);
             this.edSpeed.TabIndex = 4;
@@ -106,7 +138,7 @@
             // edAngle
             // 
             this.edAngle.Location = new System.Drawing.Point(112, 15);
-            this.edAngle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edAngle.Margin = new System.Windows.Forms.Padding(4);
             this.edAngle.Name = "edAngle";
             this.edAngle.Size = new System.Drawing.Size(128, 22);
             this.edAngle.TabIndex = 3;
@@ -148,21 +180,21 @@
             // 
             // chart1
             // 
-            chartArea4.AxisX.Maximum = 25D;
-            chartArea4.AxisX.Minimum = 0D;
-            chartArea4.AxisY.Maximum = 6D;
-            chartArea4.AxisY.Minimum = 0D;
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea2.AxisX.Maximum = 25D;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisY.Maximum = 6D;
+            chartArea2.AxisY.Minimum = 0D;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart1.Location = new System.Drawing.Point(0, 123);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1067, 431);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -172,33 +204,23 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(477, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Время:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(480, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Время:";
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(558, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "0";
-            // 
-            // Stop_btn
-            // 
-            this.Stop_btn.Location = new System.Drawing.Point(610, 32);
-            this.Stop_btn.Name = "Stop_btn";
-            this.Stop_btn.Size = new System.Drawing.Size(122, 56);
-            this.Stop_btn.TabIndex = 9;
-            this.Stop_btn.Text = "Стоп";
-            this.Stop_btn.UseVisualStyleBackColor = true;
-            this.Stop_btn.Click += new System.EventHandler(this.Stop_btn_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(540, 70);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "0";
             // 
             // Form1
             // 
@@ -207,7 +229,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -235,6 +257,8 @@
         private System.Windows.Forms.Button Stop_btn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
 
